@@ -5,6 +5,7 @@ num3=12
 min_num=min(num1,num2,num3)
 max_num=max(num1,num2,num3)
 
+#find the middle number, not very optimal :/
 middle=0
 if min_num==num1 and max_num==num2:
   middle=num3
