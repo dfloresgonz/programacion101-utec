@@ -6,4 +6,4 @@ subtotal = 500 # <<< change here :)
 
 total = subtotal + (subtotal * TAX) + (subtotal * TIP)
 
-print("Total amount to pay is $",total)
+print("Total amount to pay is:", total)
