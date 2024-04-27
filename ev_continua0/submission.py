@@ -1,7 +1,7 @@
 from math import sqrt
 
 def pregunta_1(arista:  float) -> float:
-  volumen = ((15 + (7 * sqrt(5))) / 4) * pow(arista, 3)
+  volumen = 1/4 * (15 + 7 * sqrt(5)) * arista**3
   r = round(volumen, 3)
   return r
 
