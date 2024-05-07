@@ -58,28 +58,20 @@ def pregunta_3(frecuencias: str) -> str:
 # print(pregunta_3("300 450 600 900"))
 # print(pregunta_3("128 256 384 512"))
 
-# 300 - (20)
-# 100 - x
 def hayAnomalia(idx: int, ventas_array, umbral: int) -> bool:
-  if idx < 7:
+  CANT_DIAS_EVALUAR: int = 7
+  if idx < CANT_DIAS_EVALUAR:
     return False
-  else:
-    print((idx-7),idx)
-    last_ventas = ventas_array[(idx-7):idx]
-    print(last_ventas)
-    last_ventas = sum(last_ventas)
-    print("sum:", last_ventas)
-    average = last_ventas / 7
-    print("average:", average)
-    porcentaje = ( ( average - ventas_array[idx]) * 100) / average
-    print("porcentaje:", porcentaje, "venta:", ventas_array[idx])
-    if porcentaje >= umbral:
-      print("anomalia {} {} {} {}".format(porcentaje, umbral, average, ventas_array[idx]))
-      return True
-    else:
-      return False
+  last_ventas = ventas_array[(idx-CANT_DIAS_EVALUAR):idx]
+  last_ventas = sum(last_ventas)
+  average = last_ventas / CANT_DIAS_EVALUAR
+  porcentaje = ( ( average - ventas_array[idx]) * 100) / average
+  if porcentaje >= umbral:
+    return True
+  return False
 
 def pregunta_4(ventas: str, umbral: int) -> str:
+  CANT_DAYS_SEGUIDOS_ANOMALIAS: int = 14
   ventas_array = [int(num) for num in ventas.split(",")]
   cant = 0
   idx = 0
@@ -90,7 +82,7 @@ def pregunta_4(ventas: str, umbral: int) -> str:
     else:
       cant = 0
     idx += 1
-    if cant > 14:
+    if cant > CANT_DAYS_SEGUIDOS_ANOMALIAS:
       anomalia_total = True
       break
     else:
@@ -100,5 +92,5 @@ def pregunta_4(ventas: str, umbral: int) -> str:
   else:
     return "Sin anomalia"
 
-print(pregunta_4("100,200,180,190,200,210,205,198,165,160,155,150,145,140,135,130,125,120,115,110,105,100,95,90,85,80,75,70,65,60", 10))
+# print(pregunta_4("100,200,180,190,200,210,205,198,165,160,155,150,145,140,135,130,125,120,115,110,105,100,95,90,85,80,75,70,65,60", 10))
 # print(pregunta_4("100,102,101,103,105,104,106,108,110,109,107,105,103,101,100,102,104,106,108,110,112,114,116,118,120,122,124,126,128,130", 5))
