@@ -18,7 +18,6 @@ def pregunta_2(fecha: str) -> int:
   return diff
 
 def pregunta_3(lista: list, minimo: float) -> bool:
-  response = False
   if len(lista) == 0:
     return False
   for i in lista:
@@ -26,8 +25,7 @@ def pregunta_3(lista: list, minimo: float) -> bool:
       raise TypeError('LA LISTA DEBE CONTENER SOLO NUMEROS')
     if i <= minimo:
       raise ValueError('NO TODOS LOS NUMEROS SON MAYORES QUE EL VALOR MINIMO')
-    response = True
-  return response
+  return True
 
 
 def pregunta_4(archivo_entrada: str, archivo_salida: str) -> float | None:
