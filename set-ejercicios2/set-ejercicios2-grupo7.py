@@ -14,7 +14,7 @@ def combinar_y_ordenar(lista1: List[int], lista2: List[int]) -> List[int]:
 
 lista1 = [3, 1, 4, 1, 5]
 lista2 = [9, 2, 6, 5, 3, 5]
-print(combinar_y_ordenar(lista1, lista2))
+# print(combinar_y_ordenar(lista1, lista2))
 
 #################### 1.2 #####################
 
