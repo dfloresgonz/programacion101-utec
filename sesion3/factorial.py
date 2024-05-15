@@ -6,4 +6,5 @@ def factorial(n):
     i += 1
   return result
 
+
 print(factorial(7))
