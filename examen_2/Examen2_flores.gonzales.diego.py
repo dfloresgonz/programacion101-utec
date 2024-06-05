@@ -16,6 +16,7 @@ def pregunta1():
 
     idx1=(arr[len(arr) - 2])
     idx2=(arr[len(arr) - 1])+1
+
     sum = np.sum(arr[idx1:idx2])
 
     print('The sum of elements from index {} to {} is {}'.format(idx1, idx2-1, sum))
@@ -42,6 +43,7 @@ def pregunta3():
 
     idx1 = int(arr[len(arr) - 2])
     idx2 = int(arr[len(arr) - 1])
+
     avg = np.average(arr[idx1:idx2+1])
     avg = round(avg, 2)
 
