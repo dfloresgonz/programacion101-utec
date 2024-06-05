@@ -75,6 +75,5 @@ def pregunta4():
         print('Lowest sales on day {}'.format(lowest))
         print('Total sales: {}'.format(total))
         print('Days with sales above threshold: {}'.format(greater_than_threshold))
-        pass
     entradaf.close()
   return
