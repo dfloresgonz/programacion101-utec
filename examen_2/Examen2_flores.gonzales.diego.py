@@ -49,6 +49,7 @@ def pregunta4():
   numeros = readfile('sales.in')
   for num in numeros:
     arr = np.array(num, dtype=np.float64)
+
     threshold = arr[-1]
     highest = np.argmax(arr)
     lowest = np.argmin(arr)
