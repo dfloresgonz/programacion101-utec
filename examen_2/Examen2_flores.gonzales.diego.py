@@ -12,7 +12,6 @@ def pregunta1():
         idx2=(arr[len(arr) - 1])+1
         sum = np.sum(arr[idx1:idx2])
         print('The sum of elements from index {} to {} is {}'.format(idx1, idx2-1, sum))
-        pass
     entradaf.close()
   return
 
@@ -48,13 +47,12 @@ def pregunta3():
       num = n.split(' ')
       if num[0] != '-1':
         arr = np.array(num, dtype=np.float64)
-        # print(arr)
+
         idx1 = int(arr[len(arr) - 2])
         idx2 = int(arr[len(arr) - 1]) + 1
         avg = np.average(arr[idx1:idx2])
         avg = round(avg, 2)
         print('The average temperature from day {} to day {} is {}'.format(idx1, idx2-1, avg))
-        pass
     entradaf.close()
   return
 
@@ -71,10 +69,12 @@ def pregunta4():
         highest = np.argmax(arr)
         lowest = np.argmin(arr)
         total = np.sum(arr)
-        greaten_than_threshold = np.where(arr > threshold)
+        greater_than_threshold = np.where(arr > threshold)
+
         print('Highest sales on day {}'.format(highest))
         print('Lowest sales on day {}'.format(lowest))
         print('Total sales: {}'.format(total))
-        print('Days with sales above threshold: {}'.format(greaten_than_threshold))
+        print('Days with sales above threshold: {}'.format(greater_than_threshold))
         pass
     entradaf.close()
+  return
